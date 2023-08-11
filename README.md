@@ -6,6 +6,8 @@ Test based on [this blog](https://codingfisch.github.io/2023/08/09/affine-regist
 
 ## Input Images for test
 ![Data](https://github.com/Nilser3/Test_Torchreg/assets/77469192/723f5d76-08e1-48fc-aa41-995c6ff40d72)
+
+# 1. Affine Intrasubject Intersession registration
 ## Registration by Torchreg and antsRegistration
 a) Torchreg in [notebook](https://github.com/Nilser3/Test_Torchreg/blob/main/code/torchreg_MRI.ipynb)
 
@@ -25,7 +27,7 @@ b) `antsRegistrationSyNQuick.sh -f sub01_ses02_t2.nii.gz -m sub01_ses01_pd.nii.g
 ## Registration by Transform warp  - Torchreg 
 ![image](https://github.com/Nilser3/Test_Torchreg/assets/77469192/9b772b65-b919-43fc-981c-eda8ad6897ff)
 
-# Affine Intersubject registration
+# 2. Affine Intersubject registration
 ## Registration intersubject
 a) Torchreg in [notebook](https://github.com/Nilser3/Test_Torchreg/blob/main/code/torchreg_MRI.ipynb)
 
