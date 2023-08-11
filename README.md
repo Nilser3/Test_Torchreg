@@ -1,6 +1,46 @@
 # Test Torchreg 
-Repository for test "Torchreg" registration tool with Data from ISBI 2015 - MS Lesion segmentation available [here](https://smart-stats-tools.org/lesion-challenge-2015)
+Repository for test [Torchreg](https://github.com/codingfisch/torchreg) registration tool with Data from ISBI 2015 - MS Lesion segmentation available [here](https://smart-stats-tools.org/lesion-challenge-2015)  , comparing with affine antsRegistration.
 
+Test based on [this blog](https://codingfisch.github.io/2023/08/09/affine-registration-in-12-lines-of-code.html)
+
+
+## Input Images for test
+![Data](https://github.com/Nilser3/Test_Torchreg/assets/77469192/723f5d76-08e1-48fc-aa41-995c6ff40d72)
+## Registration by Torchreg and antsRegistration
+a) Torchreg in [notebook](https://github.com/Nilser3/Test_Torchreg/blob/main/code/torchreg_MRI.ipynb)
+
+b) `antsRegistrationSyNQuick.sh -f sub01_ses02_t2.nii.gz -m sub01_ses01_pd.nii.gz -o sub01_ses01_pd_to_sub01_ses02_t2_ -t a`
+
+![Data_2](https://github.com/Nilser3/Test_Torchreg/assets/77469192/5cbb6947-bdc1-4394-b4c9-cb8652e139a2)
+
+### Mutual Information (Torchreg registration)
+`MeasureImageSimilarity -d 3 -m MI[sub01_ses02_t2.nii.gz, sub01_PD_to_ses02_t2.nii.gz ,1,32]`
+
+**0.797**
+### Mutual Information (antsRegistration)
+`MeasureImageSimilarity -d 3 -m MI[ sub01_ses02_t2.nii.gz, ants/sub01_ses01_pd_to_sub01_ses02_t2_Warped.nii.gz ,1,32]`
+
+**0.802**
+ 
+## Registration by Transform warp  - Torchreg 
+![image](https://github.com/Nilser3/Test_Torchreg/assets/77469192/9b772b65-b919-43fc-981c-eda8ad6897ff)
+
+# Affine Intersubject registration
+## Registration intersubject
+a) Torchreg in [notebook](https://github.com/Nilser3/Test_Torchreg/blob/main/code/torchreg_MRI.ipynb)
+
+b) `antsRegistrationSyNQuick.sh -f sub01_ses02_t2.nii.gz -m sub02_ses01_pd.nii.gz -o  ants/sub02_ses01_pd_to_sub01_ses02_t2_ -t a`
+
+![Data_2](https://github.com/Nilser3/Test_Torchreg/assets/77469192/c936538e-1784-4a8c-9fec-241fecabb89f)
+
+### Mutual Information (Torchreg registration)
+`MeasureImageSimilarity -d 3 -m MI[sub01_ses02_t2.nii.gz, sub02_PD_to_sub01_ses02_t2.nii.gz.nii.gz ,1,32]`
+
+**0.529**
+### Mutual Information (antsRegistration)
+`MeasureImageSimilarity -d 3 -m MI[ sub01_ses02_t2.nii.gz, ants/sub02_ses01_pd_to_sub01_ses02_t2_Warped.nii.gz ,1,32]`
+
+**0.543**
 
 
 ## Bibliography
