@@ -30,8 +30,9 @@ b) `antsRegistrationSyNQuick.sh -f sub01_ses02_t2.nii.gz -m sub01_ses01_pd.nii.g
 a) Torchreg in [notebook](https://github.com/Nilser3/Test_Torchreg/blob/main/code/torchreg_MRI.ipynb)
 
 b) `antsRegistrationSyNQuick.sh -f sub01_ses02_t2.nii.gz -m sub02_ses01_pd.nii.gz -o  ants/sub02_ses01_pd_to_sub01_ses02_t2_ -t a`
+![Data_3](https://github.com/Nilser3/Test_Torchreg/assets/77469192/df8d49da-c275-431a-9cf7-d5c1ab9e2700)
 
-![Data_2](https://github.com/Nilser3/Test_Torchreg/assets/77469192/c936538e-1784-4a8c-9fec-241fecabb89f)
+
 
 ### Mutual Information (Torchreg registration)
 `MeasureImageSimilarity -d 3 -m MI[sub01_ses02_t2.nii.gz, sub02_PD_to_sub01_ses02_t2.nii.gz.nii.gz ,1,32]`
