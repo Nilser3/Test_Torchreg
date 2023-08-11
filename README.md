@@ -1,7 +1,7 @@
 # Test Torchreg 
-Repository for test [Torchreg](https://github.com/codingfisch/torchreg) registration tool 
+Repository for test [Torchreg](https://github.com/codingfisch/torchreg) registration tool comparing with antsRegistration affine.
 
-`Data` from ISBI 2015 - MS Lesion segmentation available [here](https://smart-stats-tools.org/lesion-challenge-2015)  , comparing with affine antsRegistration.
+`Data` from ISBI 2015 - MS Lesion segmentation available [here](https://smart-stats-tools.org/lesion-challenge-2015)  
 
 Test based on [this blog](https://codingfisch.github.io/2023/08/09/affine-registration-in-12-lines-of-code.html)
 
